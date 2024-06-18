@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chopstick Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Chopstick Game</h1>
+
+      <div class="right">
+        <img
+          id="player1-left"
+          src="./svg/right-hand/1-finger-svgrepo-com.svg"
+          alt="one-finger"
+          class="hand"
+          width="50px"
+          height="50px"
+          style="transform: rotate(180deg)"
+          onclick="selectHand('player1', 'left')"
+        />
+        <img
+          id="player1-right"
+          src="./svg/left-hand/1-finger-svgrepo-com.svg"
+          alt="one-finger"
+          class="hand"
+          width="50px"
+          height="50px"
+          style="transform: rotate(180deg)"
+          onclick="selectHand('player1', 'right')"
+        />
+      </div>
+      <div class="left">
+        <img
+          id="player2-left"
+          src="./svg/left-hand/1-finger-svgrepo-com.svg"
+          alt="one-finger"
+          class="hand"
+          width="50px"
+          height="50px"
+          onclick="selectHand('player2', 'left')"
+        />
+        <img
+          id="player2-right"
+          src="./svg/right-hand/1-finger-svgrepo-com.svg"
+          alt="one-finger"
+          class="hand"
+          width="50px"
+          height="50px"
+          onclick="selectHand('player2', 'right')"
+        />
+      </div>
+
+      <div class="controls">
+        <button onclick="split('player1')">Split Player 1</button>
+        <button onclick="split('player2')">Split Player 2</button>
+      </div>
+    </div>
+    <footer>
+      <p>Owned by c4dr-me</p>
+    </footer>
+    <script src="chopstick.js"></script>
+  </body>
+</html>

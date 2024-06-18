@@ -1,0 +1,86 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Press Start 2P", system-ui;
+    text-align: center;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 2rem;
+    color: #f0f0f0;
+    text-shadow: 2px 2px 2px #fffcfc, 5px 5px 10px #000;
+    transform: perspective(1000px) rotateX(20deg);
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    -webkit-transform: perspective(1000px) rotateX(20deg);
+    transform-style: preserve-3d;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 4rem;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.left,
+.right {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+}
+
+.left,
+.right>img {
+    cursor: pointer;
+}
+
+.selected {
+    outline: 2px solid red;
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background-color: #f0f0f0;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.controls>button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 0;
+}
