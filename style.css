@@ -134,7 +134,6 @@ footer {
     }
 }
 
-/*add media query for 425px*/
 
 @media (max-width: 426px) {
     .container {
