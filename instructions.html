@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chopstick Game Instructions</title>
+    <link rel="stylesheet" href="instructions.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Chopstick Game Instructions</h1>
+      </header>
+      <section class="instructions">
+        <article>
+          <h2>Game Setup</h2>
+          <ul>
+            <li>
+              Both Player 1 and Player 2 start with 1 finger on each hand.
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h2>Hand Selection</h2>
+          <ul>
+            <li>
+              A player can select their own hand if it has 4 or fewer fingers.
+              The selected hand will be highlighted.
+            </li>
+            <li>
+              A player can attack an opponent's hand with their selected hand.
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h2>Attack</h2>
+          <ul>
+            <li>
+              When a hand is attacked, the number of fingers on the attacking
+              hand is added to the attacked hand.
+            </li>
+            <li>
+              If the total number of fingers on the attacked hand exceeds 4, it
+              becomes a "fist" (represented as 5 fingers).
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h2>Splitting</h2>
+          <ul>
+            <li>
+              A player can split the total number of fingers between their two
+              hands if the total number of fingers is even and greater than or
+              equal to 4.
+            </li>
+            <li>
+              The split distributes the total fingers equally between the two
+              hands.
+            </li>
+            <li>
+              Splitting cannot occur if both hands already have 4 fingers each
+              (maximum allowed).
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h2>Turn Management</h2>
+          <ul>
+            <li>
+              After an attack or split, the turn ends and switches to the other
+              player.
+            </li>
+            <li>
+              The game checks if both hands of a player exceed 4 fingers, which
+              would mean the other player wins.
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h2>Game Over and Reset</h2>
+          <ul>
+            <li>
+              If a player has both hands with more than 4 fingers, the game
+              declares the other player as the winner.
+            </li>
+            <li>The game can be reset to the initial state.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>Hand Display</h2>
+          <ul>
+            <li>
+              The number of fingers on each hand is displayed using
+              corresponding SVG images.
+            </li>
+            <li>The images are updated dynamically based on the game state.</li>
+          </ul>
+        </article>
+      </section>
+      <footer>
+        <button onclick="window.location.href='index.html'">
+          Back to Game
+        </button>
+      </footer>
+    </main>
+  </body>
+</html>
