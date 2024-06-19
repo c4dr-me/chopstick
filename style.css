@@ -12,7 +12,6 @@ body {
     background-color: #f0f0f0;
     min-height: 100vh;
     min-width: 100vw;
-    overflow: hidden;
 }
 
 h1 {
@@ -20,13 +19,9 @@ h1 {
     margin-top: 2rem;
     color: #f0f0f0;
     text-shadow: 2px 2px 2px #fffcfc, 5px 5px 10px #000;
-    transform: perspective(200px) rotateX(20deg);
     text-transform: uppercase;
-    -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #000;
-    -webkit-transform: perspective(500px) rotateX(30deg);
-    transform-style: preserve-3d;
 }
 
 .container {
@@ -49,7 +44,6 @@ h1 {
 
 .player {
     display: flex;
-
     align-items: center;
 }
 
@@ -57,7 +51,7 @@ h1 {
     font-size: 1.5em;
     font-family: inherit;
     position: absolute;
-    left: 22rem;
+    left: 23%;
     text-align: center;
     background-color: #333;
     color: #fff;
@@ -74,7 +68,6 @@ h1 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
-
 .hands {
     display: flex;
     gap: 20px;
@@ -85,21 +78,6 @@ h1 {
     flex-direction: row;
     gap: 2rem;
     margin-bottom: 2rem;
-}
-
-.left,
-.right {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    width: 50vw;
-}
-
-.left,
-.right>img {
-    cursor: pointer;
 }
 
 .selected {
@@ -129,4 +107,86 @@ footer {
     background-color: #000;
     color: #fff;
     padding: 1rem 0;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .player-label {
+        left: 10%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .player-label {
+        left: 10%;
+        font-size: 1rem;
+    }
+
+    .controls>button {
+        width: 35vw;
+    }
+
+    .controls>button:active,
+    .instructions:active {
+        transform: scale(1.1);
+    }
+}
+
+/*add media query for 425px*/
+
+@media (max-width: 426px) {
+    .container {
+        gap: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+
+    .player-label {
+        width: 5rem;
+        font-size: 0.5em;
+        text-align: center;
+    }
+
+    .hands>img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .controls>button {
+        width: 40vw;
+        font-size: 1rem;
+    }
+
+    .controls>button:active,
+    .instructions:active {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 375px) {
+    h1 {
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .player-label {
+        width: 5rem;
+        font-size: 0.2em;
+    }
+
+    .hands>img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .controls {
+        font-size: 0.6em;
+    }
 }
