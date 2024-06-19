@@ -10,6 +10,7 @@ A web-based implementation of the classic hand game "Chopsticks" developed using
 - [Rules](#rules)
 - [Features](#features)
 - [Installation](#installation)
+- [Future Possibilities](#future-possibilities)
 - [Usage](#usage)
 - [Instructions](#instructions)
 - [License](#license)
@@ -54,6 +55,12 @@ To run the game locally, follow these steps:
 
 3. **Open `index.html` in a web browser**:
    You can simply double-click the `index.html` file, or open it using your browser.
+
+## Future Possibilities
+
+- Implement different variations of the Chopsticks game (e.g., rules with no splitting, 5-finger point, etc.).
+- Add a scoring system or levels of difficulty.
+- Incorporate multiplayer functionality using sockets or online multiplayer support.
 
 ## Usage
 
