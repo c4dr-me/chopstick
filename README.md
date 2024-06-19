@@ -74,7 +74,7 @@ To run the game locally, follow these steps:
 For detailed instructions, please visit the [Instruction Page](https://c4dr-me.github.io/chopstick/instructions.html).
 
 ## Live Demo
-Play the game live [here](https://c4dr-me.github.io/chopstick/).
+Play the game live [here](https://c4dr-me.github.io/chopstick-game/).
 
 ## License
 
