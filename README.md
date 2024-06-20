@@ -19,7 +19,7 @@ A web-based implementation of the classic hand game "Chopsticks" developed using
 
 Chopsticks is a two-player hand game where players use their fingers to attack and defend. The game starts with each player having one finger raised on each hand. Players take turns to either attack the opponent or split their fingers between their own hands.
 
-**Note** : In this game starts from Player 1 First
+**Note** : In this, game starts whichever hand is clicked first on either player 1 or player 2
 
 ## Rules
 
@@ -74,6 +74,7 @@ To run the game locally, follow these steps:
 For detailed instructions, please visit the [Instruction Page](https://c4dr-me.github.io/chopstick/instructions.html).
 
 ## Live Demo
+
 Play the game live [here](https://c4dr-me.github.io/chopstick-game/).
 
 ## License

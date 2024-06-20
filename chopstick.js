@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let currentPlayer = 'player1';
+    let currentPlayer = null;
     let selectedHand = null;
+    let gameStarted = false;
 
     const hands = {
         player1: { left: 1, right: 1 },
@@ -8,6 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.selectHand = (player, hand) => {
+        if (!gameStarted) {
+            currentPlayer = player;
+            gameStarted = true;
+        }
+
         if (currentPlayer === player && hands[player][hand] <= 4) {
             if (selectedHand) {
                 const previousSelectedHand = document.getElementById(`${selectedHand.player}-${selectedHand.hand}`);
@@ -79,13 +85,26 @@ document.addEventListener('DOMContentLoaded', () => {
         currentPlayer = currentPlayer === 'player1' ? 'player2' : 'player1';
 
         if (checkGameOver()) {
-            alert(`${currentPlayer === 'player1' ? 'Player 2' : 'Player 1'} wins!`);
-            resetGame();
+            displayGameOver();
+            return;
         }
     };
 
     const checkGameOver = () => {
         return (hands.player1.left > 4 && hands.player1.right > 4) || (hands.player2.left > 4 && hands.player2.right > 4);
+    };
+
+    const displayGameOver = () => {
+        const loser = currentPlayer;
+        hands[loser].left = 5;
+        hands[loser].right = 5;
+        updateHandDisplay(loser, 'left');
+        updateHandDisplay(loser, 'right');
+        
+        setTimeout(() => {
+            alert(`${loser === 'player1' ? 'Player 2' : 'Player 1'} wins!`);
+            resetGame();
+        }, 200);
     };
 
     const resetGame = () => {
@@ -97,8 +116,9 @@ document.addEventListener('DOMContentLoaded', () => {
         updateHandDisplay('player1', 'right');
         updateHandDisplay('player2', 'left');
         updateHandDisplay('player2', 'right');
-        currentPlayer = 'player1';
+        currentPlayer = null;
         selectedHand = null;
+        gameStarted = false;
     };
 
     window.selectHand = selectHand;
